@@ -1,4 +1,4 @@
-package qubiz.movinglightcontroller;
+package qubiz.movinglightcontroller.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,32 +10,37 @@ import com.larswerkman.holocolorpicker.ColorPicker;
 import com.larswerkman.holocolorpicker.SaturationBar;
 import com.larswerkman.holocolorpicker.ValueBar;
 
-public class PageFragment extends Fragment {
-    public static final String ARG_PAGE =  "ARG_PAGE";
+import qubiz.movinglightcontroller.R;
+
+public class ColorPickerFragment extends Fragment {
+    public static final String ARG_POSITION = "POSITION";
 
     private ColorPicker colorPicker;
     private SaturationBar saturationBar;
     private ValueBar valueBar;
 
-    public int page;
-
-    public static PageFragment newInstance(int page) {
-        Bundle args = new Bundle();
-        args.putInt(ARG_PAGE, page);
-        PageFragment fragment = new PageFragment();
-        fragment.setArguments(args);
+    public static ColorPickerFragment newInstance(int position) {
+        ColorPickerFragment fragment = new ColorPickerFragment();
+        Bundle arguments = new Bundle();
+        arguments.putInt(ARG_POSITION, position);
+        fragment.setArguments(arguments);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        page = getArguments().getInt(ARG_PAGE);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_page, container, false);
+        View view = inflater.inflate(R.layout.fragment_page_color_picker, container, false);
+
+        Bundle bundle = getArguments();
+
+        if(bundle != null) {
+            // SET ARGUMENTS
+        }
 
         colorPicker = (ColorPicker) view.findViewById(R.id.color_picker);
         saturationBar = (SaturationBar) view.findViewById(R.id.saturation_bar);
@@ -46,10 +51,6 @@ public class PageFragment extends Fragment {
         colorPicker.addValueBar(valueBar);
 
         return view;
-    }
-
-    private void initializeVariables(View view) {
-
     }
 
 }

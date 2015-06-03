@@ -1,27 +1,17 @@
 package qubiz.movinglightcontroller;
 
-import android.graphics.Color;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import qubiz.movinglightcontroller.adapters.MyPagerAdapter;
-import qubiz.movinglightcontroller.tabs.SlidingTabLayout;
-
-public class MainActivity extends ActionBarActivity {
-
-    private Toolbar toolbar;
-    private ViewPager viewPager;
-    private SlidingTabLayout tabs;
+public class RemoteControl extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.remote_conrtol);
+        setContentView(R.layout.activity_main);
 
         initializeVariables();
 
@@ -60,18 +50,10 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void initializeVariables() {
-        toolbar = (Toolbar) findViewById(R.id.app_bar);
-        toolbar.setTitleTextColor(Color.parseColor("#EFEFEF"));
+        /*viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager.setAdapter(new TabsFragmentPagerAdapter(getSupportFragmentManager()));
 
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        viewPager = (ViewPager) findViewById(R.id.view_pager);
-        viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
-
-        tabs = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
-        tabs.setViewPager(viewPager);
-
-
+        tabStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
+        tabStrip.setViewPager(viewPager);*/
     }
 }

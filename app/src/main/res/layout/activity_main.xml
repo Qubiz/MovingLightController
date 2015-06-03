@@ -3,46 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="@color/background_material_dark"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:orientation="horizontal"
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:layout_height="0dp"
+        android:layout_weight="0.495">
 
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/switch1"
-            android:gravity="left"
-            android:textOn="MANUAL"
-            android:textOff="AUTO"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:text="REMOTE CONTROL"
+            android:id="@+id/button"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/remote_control_100"
+            android:textColor="@color/abc_primary_text_material_dark"/>
+    </RelativeLayout>
 
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/switch2"
-            android:gravity="right"/>
-    </LinearLayout>
 
-    <com.astuetz.PagerSlidingTabStrip
-        android:id="@+id/tabs"
-        app:pstsShouldExpand="true"
-        app:pstsTextAllCaps="true"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp">
-    </com.astuetz.PagerSlidingTabStrip>
+        android:layout_height="0dp"
+        android:layout_weight="0.001"
+        android:background="@color/background_material_light">
+    </FrameLayout>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white" />
+        android:layout_height="0dp"
+        android:layout_weight="0.495">
+    </RelativeLayout>
 </LinearLayout>
