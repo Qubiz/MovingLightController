@@ -1,6 +1,5 @@
 package qubiz.movinglightcontroller.adapters;
 
-import android.app.Application;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -10,10 +9,11 @@ import qubiz.movinglightcontroller.fragments.ColorPickerFragment;
 
 public class MyPagerAdapter extends FragmentPagerAdapter{
 
+    private final int TAB_COUNT = 2;
+
     final String[] tabNames = new String[] {
-            "TAB 1",
-            "TAB 2",
-            "Tab 3"
+            "COLOR PICKER",
+            "PRESETS",
     };
 
     public MyPagerAdapter(FragmentManager fragmentManager) {
@@ -27,12 +27,11 @@ public class MyPagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public Fragment getItem(int position) {
-        ColorPickerFragment colorPickerFragment = ColorPickerFragment.newInstance(position);
-        return colorPickerFragment;
+        return ColorPickerFragment.newInstance(position);
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return TAB_COUNT;
     }
 }

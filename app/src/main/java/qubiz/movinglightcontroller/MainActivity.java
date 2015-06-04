@@ -1,15 +1,16 @@
 package qubiz.movinglightcontroller;
 
 import android.graphics.Color;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import qubiz.movinglightcontroller.adapters.MyPagerAdapter;
+import qubiz.movinglightcontroller.fragments.ColorPickerFragment;
 import qubiz.movinglightcontroller.tabs.SlidingTabLayout;
 
 public class MainActivity extends ActionBarActivity {
@@ -60,18 +61,12 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void initializeVariables() {
-        toolbar = (Toolbar) findViewById(R.id.app_bar);
-        toolbar.setTitleTextColor(Color.parseColor("#EFEFEF"));
-
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
 
         tabs = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
         tabs.setViewPager(viewPager);
 
-
+        getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>" + getTitle() + "</font>"));
     }
 }
