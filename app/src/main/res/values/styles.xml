@@ -4,6 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light">
         <item name="colorPrimary">@color/toolbarColor</item> 
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item> 
+        <item name="colorAccent">@android:color/holo_green_light</item>
         <item name="android:windowBackground">@color/windowBackgroundColor</item>
         <item name="android:textColor">@android:color/white</item>
     </style>

@@ -22,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.remote_conrtol);
+        setContentView(R.layout.remote_control);
 
         initializeVariables();
 
@@ -42,6 +42,10 @@ public class MainActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuItem item = menu.findItem(R.id.main_on_off_switch);
+        item.setActionView(R.layout.toolbar_switch);
+        item = menu.findItem(R.id.empty_space);
+        item.setActionView(R.layout.toolbar_empty_item);
         return true;
     }
 
@@ -65,6 +69,7 @@ public class MainActivity extends ActionBarActivity {
         viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
 
         tabs = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
+        tabs.setDistributeEvenly(true);
         tabs.setViewPager(viewPager);
 
         getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>" + getTitle() + "</font>"));

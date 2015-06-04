@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import qubiz.movinglightcontroller.R;
 import qubiz.movinglightcontroller.fragments.ColorPickerFragment;
+import qubiz.movinglightcontroller.fragments.PresetsFragment;
 
 public class MyPagerAdapter extends FragmentPagerAdapter{
 
@@ -27,7 +28,14 @@ public class MyPagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public Fragment getItem(int position) {
-        return ColorPickerFragment.newInstance(position);
+        switch(position) {
+            case 0:
+                return ColorPickerFragment.newInstance(position);
+            case 1:
+                return PresetsFragment.newInstance(position);
+            default:
+                return PresetsFragment.newInstance(position);
+        }
     }
 
     @Override

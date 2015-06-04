@@ -3,7 +3,6 @@ package qubiz.movinglightcontroller.fragments;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +16,7 @@ import qubiz.movinglightcontroller.R;
 import qubiz.movinglightcontroller.tabs.SlidingTabLayout;
 
 public class ColorPickerFragment extends Fragment {
-    public static final String ARG_POSITION = "POSITION";
+    public static final String ARG_POSITION = "COLOR PICKER FRAGMENT POSITION";
 
     private ColorPicker colorPicker;
     private SaturationBar saturationBar;
@@ -40,7 +39,7 @@ public class ColorPickerFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_page_color_picker, container, false);
+        View view = inflater.inflate(R.layout.fragment_color_picker, container, false);
 
         Bundle bundle = getArguments();
 

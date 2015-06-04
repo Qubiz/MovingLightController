@@ -11,7 +11,7 @@ public class RemoteControl extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.remote_conrtol);
+        setContentView(R.layout.remote_control);
 
         initializeVariables();
 
