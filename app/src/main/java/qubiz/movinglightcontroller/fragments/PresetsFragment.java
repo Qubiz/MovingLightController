@@ -2,7 +2,6 @@ package qubiz.movinglightcontroller.fragments;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,9 +9,6 @@ import android.view.ViewGroup;
 
 import qubiz.movinglightcontroller.R;
 
-/**
- * Created by QUBiZ on 4-6-2015.
- */
 public class PresetsFragment extends Fragment {
 
     public static final String ARG_POSITION = "PRESETS FRAGMENT POSITION";

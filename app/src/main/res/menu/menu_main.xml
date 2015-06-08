@@ -4,7 +4,7 @@
     tools:context=".MainActivity">
 
     <item
-        android:id="@+id/main_on_off_switch"
+        android:id="@+id/menu_item_main_on_off_switch"
         android:title=""
         app:showAsAction="always"
         android:actionLayout="@layout/toolbar_switch"
@@ -12,7 +12,7 @@
         />
 
     <item
-        android:id="@+id/empty_space"
+        android:id="@+id/menu_item_empty_space"
         android:title=""
         app:showAsAction="always"
         android:actionLayout="@layout/toolbar_empty_item"

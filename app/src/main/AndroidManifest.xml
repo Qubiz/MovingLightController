@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="qubiz.movinglightcontroller" >
 
+    <uses-permission
+        android:name="android.permission.BLUETOOTH">
+    </uses-permission>
+
+    <uses-permission
+        android:name="android.permission.INTERNET">
+    </uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
